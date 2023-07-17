@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Styles spécifiques pour cette page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ma Marketplace</h1>
+    <nav>
+      <ul>
+        <li><a href="accueil.html">Accueil</a></li>
+        <li><a href="produits.html">Produits</a></li>
+        <li><a href="vendeurs.html">Vendeurs</a></li>
+        <li><a href="panier.html">Panier</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="featured-products">
+      <h2>Produits en vedette</h2>
+      <ul id="featured-product-list">
+        <!-- Contenu des produits en vedette -->
+        <li>Produit 1</li>
+        <li>Produit 2</li>
+        <li>Produit 3</li>
+      </ul>
+    </section>
+    
+    <section id="popular-products">
+      <h2>Produits populaires</h2>
+      <ul id="popular-product-list">
+        <!-- Contenu des produits populaires -->
+        <li>Produit A</li>
+        <li>Produit B</li>
+        <li>Produit C</li>
+      </ul>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Ma Marketplace. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // JavaScript pour l'interactivité
+    const featuredProductList = document.getElementById('featured-product-list');
+    const popularProductList = document.getElementById('popular-product-list');
+
+    // Ajouter un événement de clic pour les produits en vedette
+    featuredProductList.addEventListener('click', (event) => {
+      if (event.target.tagName === 'LI') {
+        const selectedProduct = event.target.innerText;
+        alert(`Vous avez sélectionné le produit en vedette : ${selectedProduct}`);
+      }
+    });
+
+    // Ajouter un effet de survol pour les produits populaires
+    popularProductList.addEventListener('mouseover', (event) => {
+      if (event.target.tagName === 'LI') {
+        event.target.style.backgroundColor = '#f0f0f0';
+      }
+    });
+
+    popularProductList.addEventListener('mouseout', (event) => {
+      if (event.target.tagName === 'LI') {
+        event.target.style.backgroundColor = 'transparent';
+      }
+    });
+  </script>
+</body>
+</html>
